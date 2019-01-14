@@ -1,3 +1,5 @@
+require 'pry'
+
 def welcome
   puts "Welcome to the Blackjack Table"
 end
@@ -56,7 +58,7 @@ def runner
   welcome
   card_total = initial_round
   until card_total > 21
-    require.pry 
+    binding.pry 
     hit?(card_total)
   end
   end_game (card_total)
